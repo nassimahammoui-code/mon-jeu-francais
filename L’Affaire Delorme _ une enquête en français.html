@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L’Affaire Delorme : une enquête en français</title>
+<style>
+:root{--bg:#fafaf7;--card:#fff;--ink:#000;--mut:#3a3740;--ac:#a50e1a;--on:#fff;--ok:#146c33;--ko:#a84a00;--line:#b9b4ac;--soft:#ebeae4;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0d10;--card:#18181c;--ink:#f1eeea;--mut:#a29da8;--ac:#ff4655;--on:#0d0d10;--ok:#5de08a;--ko:#ffb454;--line:#2c2c33;--soft:#222228;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0d10;--card:#18181c;--ink:#f1eeea;--mut:#a29da8;--ac:#ff4655;--on:#0d0d10;--ok:#5de08a;--ko:#ffb454;--line:#2c2c33;--soft:#222228;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:var(--fs,20px)/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between;align-items:center;padding:8px 16px;background:var(--card);color:var(--ink);border-bottom:4px solid var(--ac)}
+.logo{font:italic 700 19px Georgia,"Times New Roman",serif;letter-spacing:.3px}
+.pv{font:700 15px system-ui;border:2px solid var(--ink);border-radius:99px;padding:3px 12px}.hc{display:flex;gap:6px;align-items:center}.hc button{min-height:40px;padding:2px 11px;font-size:17px}
+main{max-width:660px;margin:0 auto;padding:16px}
+h1,h2{font:italic 700 clamp(28px,7vw,40px)/1.1 Georgia,"Times New Roman",serif;margin:8px 0 10px}h2{font-size:27px}
+p{margin:8px 0}.mut{color:var(--mut);font-size:.85em}
+button{font:inherit;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:6px;padding:9px 15px;min-height:46px;font-weight:700}
+button:hover{background:var(--soft)}button:focus-visible,select:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+button.p{background:var(--ac);border-color:var(--ac);color:var(--on)}button:disabled{opacity:.55;cursor:default}
+button.good{background:var(--ok);border-color:var(--ok);color:#0d0d10;opacity:1}
+.steps{display:flex;gap:6px;margin:4px 0 12px}.steps i{flex:1;height:8px;border-radius:2px;background:var(--line)}.steps i.on{background:var(--ac)}.steps i.ok{background:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:12px 0}
+.story{border-left:5px solid var(--ac);font:italic 1em/1.6 Georgia,"Times New Roman",serif}
+.fiche{border-top:4px solid var(--ink)}
+.qq{font:700 1.15em/1.35 Georgia,serif;margin:8px 0}
+.cx{display:inline-block;background:var(--ink);color:var(--bg);border-radius:4px;padding:1px 10px;font-size:14px;font-weight:700}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.o{flex-direction:column}.o button{text-align:left;font-size:1em;width:100%}
+.fb{margin-top:10px}.ok{color:var(--ok);font-weight:800}.ko{color:var(--ko);font-weight:800}
+.w{cursor:pointer;border-radius:3px}.w:hover{background:var(--soft)}
+.found{background:var(--ok);color:#0d0d10;padding:1px 4px;border-radius:3px}.found small{display:block;font-size:13px}
+.miss{background:var(--ko);color:#0d0d10;border-radius:3px}
+.txt{line-height:2.4;font-size:1em}.txt select{font:inherit;border:2px solid var(--line);border-radius:6px;padding:2px;background:var(--bg);color:var(--ink)}.txt .g{border-color:var(--ok)}.txt .r{border-color:var(--ko)}
+table{border-collapse:collapse;width:100%;font-size:.85em}th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}.tw{overflow-x:auto}
+.sent{font:italic 700 1.1em/1.4 Georgia,serif}audio{width:100%;margin-top:8px}
+.dots{display:flex;gap:4px;margin-bottom:6px}.dots i{flex:1;height:5px;background:var(--line)}.dots i.on{background:var(--ac)}
+li{margin:5px 0}
+details{border:1px solid var(--line);border-radius:6px;padding:6px 12px;margin:8px 0}summary{cursor:pointer;font-weight:700;min-height:32px}
+label.ck{display:flex;gap:10px;align-items:center;min-height:40px}label.ck input{width:20px;height:20px}
+.gen select{font:inherit;border:2px solid var(--ink);border-radius:6px;padding:8px;background:var(--bg);color:var(--ink);min-height:44px}
+.steps button{flex:1;min-height:42px;padding:4px;font-size:16px}.steps button.on{background:var(--ac);border-color:var(--ac);color:var(--on)}.steps button.ok{background:var(--ink);color:var(--bg)}
+</style></head><body>
+<header><span class="logo">L’Affaire Delorme</span><span class="hc"><button id="fm" aria-label="Réduire le texte">A−</button><button id="fp" aria-label="Agrandir le texte">A+</button><button id="th" aria-label="Changer le thème">🌙</button><span class="pv">🔎 <b id="pts">0</b></span></span></header>
+<main id="v"></main>
+<script>
+const $=s=>document.querySelector(s),sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+(()=>{const r=document.documentElement;let fs=20,th='light';try{fs=+localStorage.getItem('fs')||20;th=localStorage.getItem('th')||'light'}catch(e){}
+const sv=()=>{try{localStorage.setItem('fs',fs);localStorage.setItem('th',th)}catch(e){}};
+const ap=()=>{r.style.setProperty('--fs',fs+'px');r.dataset.theme=th;$('#th').textContent=th=='light'?'🌙':'☀️'};
+$('#fm').onclick=()=>{fs=Math.max(16,fs-2);ap();sv()};$('#fp').onclick=()=>{fs=Math.min(32,fs+2);ap();sv()};$('#th').onclick=()=>{th=th=='light'?'dark':'light';ap();sv()};ap()})();
+let pts=0,cur=0;const ok=[],miss=[];const add=n=>{pts+=n;$('#pts').textContent=pts};
+const spk=(t,r)=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='fr-FR';u.rate=r||.9;const v=(speechSynthesis.getVoices()||[]).find(x=>x.lang&&x.lang.startsWith('fr'));if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}};
+const PR=["Exact.","Bien vu.","Preuve validée.","Solide.","Bonne déduction."];const pr=()=>PR[Math.floor(Math.random()*PR.length)];
+const tb=(h,r)=>`<div class="tw"><table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.map(x=>`<tr>${x.map(y=>`<td>${y}</td>`).join('')}</tr>`).join('')}</table></div>`;
+
+/* Fiches (coûtent 1 preuve, une fois par pièce) */
+const F=[
+`<b>Les paires qui piègent l’écrit</b>${tb(['Paire','Test rapide'],[['a / à','« a » = avait (verbe avoir)'],['ou / où','« ou » = ou bien · « où » = lieu'],['son / sont','« son » = mon · « sont » = étaient'],['ce / se','« se » = me/te : il <b>se</b> cache'],['qu’elle / quelle','« qu’elle » = que + elle · « quelle » = quelle heure ?'],['plus tôt / plutôt','« plus tôt » ≠ plus tard · « plutôt » = de préférence'],['s’en / sans / cent','« s’en » = se + en : il s’en va']])}`,
+`<b>Inversion avancée</b><ul><li>Sujet = nom : on le garde <b>et</b> on ajoute un pronom : « Pourquoi <i>Madame Delorme</i> est-<b>elle</b> partie ? »</li><li>Préposition + qui/quoi en tête : « <b>À qui</b> avez-vous parlé ? »</li><li>Négation : « <b>N’</b>avez-vous <b>rien</b> remarqué ? »</li><li>Poli : « <b>Auriez-vous</b> l’obligeance de… »</li><li>Indirect : <b>pas</b> d’inversion : « Dites-moi ce que vous avez vu. »</li><li>🇪🇸 ¿Cuánto tiempo lleva…? → « <b>Depuis combien de temps</b> travaillez-vous ici ? »</li></ul>`,
+`<b>Exceptions célèbres</b>${tb(['Mot','Se dit'],[['femme','« fam »'],['monsieur','« meu-sieu »'],['août','« ou »'],['oignon','« o-gnon »'],['sept','« sèt »'],['second','« se-gon »'],['fils','« fiss »'],['poêle','« poual »'],['sceptique','« sèp-tik »'],['asthme','« asm »'],['plomb','« plon »'],['paon','« pan »'],['faisons','« feu-zon »'],['écureuil','« é-ku-reuy »']])}<p>Verbes : « ils parlent » → <b>-ent muet</b>. Adverbes : « souvent » → <b>-ent = an</b>.</p>`,
+`<b>Avant de parler : trois réflexes</b><ul><li>L’<b>accent</b> tombe à la fin du groupe de mots.</li><li>La <b>mélodie</b> monte pour une question oui/non, descend avec un mot interrogatif.</li><li>Les <b>sons à surveiller</b> pour toi : v/b, ui/oi, s + consonne sans « e » devant.</li></ul>`,
+`<b>Rappels</b><ul><li>cesser <b>de</b> · avoir besoin <b>de</b> · décider <b>de</b> · finir <b>par</b></li><li>« <b>Ce</b> qui m’a frappé » (ce qui/ce que)</li><li>son/sont · a-t-il (le -t-)</li></ul>`];
+
+/* Pièce 1 : notes du gardien */
+const E=(a,b,w)=>[a,b,w];
+const D=["Hier soir, j’ai entendu un bruit ",E("ou premier étage","au premier étage","au = à + le. « Ou » = ou bien."),". ",E("Sont fils","Son fils","« Son fils » = son = à lui. « Sont » est le verbe être."),
+" m’a demandé ",E("si c’étais","si c’était","Imparfait, 3e personne : -ait."),
+" le facteur. Le voleur ",E("ce cache","se cache","« Se » est le pronom de « se cacher »."),
+" derrière le rideau, j’en suis sûr. J’ai cru ",E("quelle était","qu’elle était","que + elle = qu’elle."),
+" partie, mais ",E("elle à","elle a","« a » = verbe avoir, sans accent."),
+" dû revenir ",E("plutôt","plus tôt","« plus tôt » ≠ « plus tard »."),
+" que d’habitude. Il ",E("sans est","s’en est","« s’en aller » : s’ = se, en."),
+" allé par la fenêtre, et il est ",E("peut être","peut-être","Adverbe : peut-être, avec un trait d’union."),
+" déjà loin."];
+
+/* Pièce 2 : interrogatoire */
+const IT=[
+["Pourquoi Madame Delorme est-elle partie si tôt ?","Pourquoi Madame Delorme est partie-t-elle si tôt ?","Pourquoi est Madame Delorme partie si tôt ?","Avec un nom, on le garde et on ajoute un pronom : « Delorme est-elle ».","nom + pronom de rappel","Au gardien"],
+["Quand les voleurs sont-ils entrés ?","Quand sont les voleurs entrés ?","Quand les voleurs sont entrés-ils ?","Nom + verbe-pronom : « les voleurs sont-ils ».","nom + pronom","Au gardien"],
+["À qui avez-vous parlé en dernier ?","Qui avez-vous parlé à en dernier ?","À qui vous avez parlé-vous en dernier ?","La préposition passe devant « qui » : « À qui avez-vous… ».","préposition devant","À la voisine"],
+["Avec quoi a-t-il forcé la porte ?","Avec quoi il a forcé-t-il la porte ?","Avec quoi a il forcé la porte ?","a + il : on ajoute -t-.","deux voyelles","Au commissaire"],
+["Dites-moi ce que vous avez vu.","Dites-moi ce que avez-vous vu.","Dites-moi qu’est-ce que vous avez vu.","Question indirecte : ordre normal, pas d’inversion.","pas d’inversion","Au témoin"],
+["Auriez-vous l’obligeance de répéter ?","Avez-vous eu l’obligeance de répéter ?","Auriez vous l’obligeance de répéter ?","Politesse soignée : conditionnel + inversion + trait d’union.","conditionnel","À la directrice"],
+["N’avez-vous rien remarqué d’étrange ?","Ne avez-vous rien remarqué d’étrange ?","N’avez-vous pas rien remarqué d’étrange ?","« ne … rien » entoure « avez-vous ».","ne … rien autour","Au concierge"],
+["🇪🇸 ¿Cuánto tiempo lleva trabajando aquí ? → Depuis combien de temps travaillez-vous ici ?","Combien de temps travaillez-vous ici depuis ?","Combien de temps avez-vous travaillé ici depuis ?","On commence par « depuis combien de temps », avec le présent.","depuis + temps","Au jardinier"]
+].map(([a,b,c,w,h,cx])=>[a.replace(/^🇪🇸.*→ /,'Comment le dit-on ? 🇪🇸 ¿Cuánto tiempo lleva trabajando aquí?'),[a.replace(/^🇪🇸.*→ /,''),b,c],w,h,cx,a.replace(/^🇪🇸.*→ /,'')]);
+IT[7][0]="Comment le dit-on ? 🇪🇸 ¿Cuánto tiempo lleva trabajando aquí?";
+IT.forEach((x,i)=>{if(i<7)x[0]=(i==4?"Choisis la phrase correcte.":"Choisis la question correcte.")});
+
+IT.push(
+["Choisis la question correcte.",["Où le gardien a-t-il passé la nuit ?","Où a le gardien passé la nuit ?","Où le gardien a passé-t-il la nuit ?"],"Nom + auxiliaire-pronom : « le gardien a-t-il passé ».","nom + a-t-il","Au gardien","Où le gardien a-t-il passé la nuit ?"],
+["Choisis la question correcte.",["Lequel de ces hommes avez-vous vu ?","Quel de ces hommes avez-vous vu ?","Lequel de ces hommes vous avez-vous vu ?"],"« Lequel » (pronom) devant « de ces hommes » ; « quel » s’accorde avec un nom.","lequel ou quel","Au témoin","Lequel de ces hommes avez-vous vu ?"],
+["Choisis la question correcte.",["Qu’a-t-il dit en partant ?","Que a-t-il dit en partant ?","Qu’il a dit en partant ?"],"« Que » s’élide devant une voyelle : qu’a-t-il.","élision","Au voisin","Qu’a-t-il dit en partant ?"],
+["Choisis la question correcte.",["Se souvient-elle de ce qui s’est passé ?","Elle se souvient-elle de ce qui s’est passé ?","Souvient-elle se de ce qui s’est passé ?"],"Le pronom réfléchi reste devant le verbe : « se souvient-elle ».","se + verbe","À la directrice","Se souvient-elle de ce qui s’est passé ?"]);
+/* Pièce 3 : laboratoire */
+const SO=[["femme",["fam","fèm","feum"],"Femme se dit « fam » : le e se prononce « a »."],["monsieur",["meu-sieu","mon-sieur","mo-sieur"],"Monsieur = « meu-sieu » : ni « on », ni « r »."],["août",["ou","a-oût","a-out"],"Août = « ou »."],["oignon",["o-gnon","oi-gnon","oua-gnon"],"Oignon = « o-gnon » : « oi » se dit « o » ici."],["sept",["sèt","sept-e","sè"],"Sept = « sèt » : le p est muet."],["second",["se-gon","sé-kon","sé-con-d"],"Second = « se-gon » : le c se dit « g »."],["fils",["fiss","fil","fi"],"Fils = « fiss » : le l est muet, le s se dit."],["poêle",["poual","pol","poèl"],"Poêle = « poual »."]]
+.map(([m,o,w])=>["Comment se prononce « "+m+" » ?",o,w,"c’est une exception célèbre","Écoute pour vérifier",m]);
+SO.push(["Dans « ils parlent », la terminaison -ent se dit…",["rien (elle est muette)","« an »","« ent »"],"Verbes : -ent muet. Adverbes (souvent) : « an ».","verbe ≠ adverbe","Orthographe et son",null],["Dans « question », le groupe « ti » se dit…",["« ti » (comme dans « tire »)","« si » (comme dans « nation »)","« chi »"],"Après un s : « ti » reste « ti » (kès-tion). Dans « nation » : « si ».","après s","Piège classique","question"]);
+
+SO.push(
+["Comment se prononce « sceptique » ?",["sèp-tik","skèp-tik","sep-tik"],"Sceptique = « sèp-tik » : le c est muet.","un c muet","Mot savant","sceptique"],
+["Comment se prononce « asthme » ?",["asm","as-tme","as-teum"],"Asthme = « asm » : le th disparaît.","th muet","Mot savant","asthme"],
+["Comment se prononce « plomb » ?",["plon","plom-b","plomp"],"Plomb = « plon » : le b est muet.","b muet","Piège","plomb"],
+["Comment se prononce « paon » ?",["pan","pa-on","pa-onne"],"Paon = « pan ».","a + o","Piège","paon"],
+["Comment se prononce « faisons » ?",["feu-zon","fè-zon","fai-son"],"Faisons = « feu-zon » : « ai » se dit « e » ici.","exception du verbe faire","Piège","faisons"],
+["Comment se prononce « écureuil » ?",["é-ku-reuy","é-cu-reuil","é-ku-ré-ouil"],"Écureuil = « é-ku-reuy » : « euil » se dit « euy ».","euil","Piège","écureuil"]);
+/* Pièce 4 : messagerie */
+const VO=[["Demande poliment au commissaire s’il a pu interroger le jardinier.","Avez-vous pu interroger le jardinier ?","inversion polie"],["Dis que tu te demandes pourquoi le gardien n’a rien entendu.","Je me demande pourquoi le gardien n’a rien entendu.","question indirecte, sans inversion"],["Épelle « Delorme », puis demande où il habite.","D-E-L-O-R-M-E. Où habite-t-il ?","épeler + -t-"]];
+
+/* Pièce 5 : verdict */
+const TX="Le coupable est le jardinier. Il a décidé [a] voler le tableau, car il avait besoin [b] argent. [c] qui m’a mis la puce à l’oreille, c’est [d] comportement : il ne cessait [e] regarder sa montre. Comment [f] pu entrer sans être vu ? [g] la fenêtre, tout simplement. Interrogé, il s’est mis [i] trembler, puis il a évité [j] répondre. Il a fini [h] avouer.";
+const CL={a:["de",["—","à","de","pour"]],b:["d’",["de","d’","à","—"]],c:["Ce",["Ce","Se","Ceux"]],d:["son",["son","sont","sons"]],e:["de",["à","de","—","par"]],f:["a-t-il",["a-t-il","a t il","a-il","a il"]],g:["Par",["Par","Pour","Dans","Sur"]],h:["par",["à","de","par","—"]],i:["à",["à","de","—","par"]],j:["de",["à","de","—","par"]]};
+const ROOMS=[
+{n:"Archives : les questions inversées",st:"Avant d’interroger qui que ce soit, le commissaire te donne accès aux archives. Ici, tu manipules la mécanique de l’inversion : tu choisis, la page construit. Puis un défi pour tester ta compréhension.",f:-1},
+{n:"Archives : verbes + à / de / par / rien",st:"Deuxième dossier : le rappel que tout enquêteur doit maîtriser. Comprends la logique de chaque petit mot, puis passe l’examen.",f:-1},
+{n:"Le bureau du gardien",st:"Le tableau de Madame Delorme a disparu. Le gardien a laissé une note écrite à la hâte. Elle est truffée de fautes, et la vérité se cache derrière.",f:0},
+{n:"L’interrogatoire",st:"Plusieurs suspects, une seule nuit. Tu dois poser les bonnes questions, sans te tromper de forme : le commissaire t’observe.",f:1},
+{n:"Le laboratoire des sons",st:"Un enregistrement a été retrouvé. Pour le comprendre, il faut maîtriser les mots dont la prononciation ne ressemble pas à l’écriture, y compris les plus vicieux.",f:2},
+{n:"Le face-à-face",st:"Fini de lire à voix haute comme à l’école. Ici, tu parles pour de vrai : tu traduis, tu improvises, tu répètes de mémoire. Enregistre-toi : le commissaire te réécoutera.",f:3},
+{n:"Le verdict",st:"Tu as toutes les preuves. Rédige l’accusation finale. Une erreur de détail, et l’avocat de la défense s’en servira.",f:4}];
+
+/* Moteur QCM : 2 essais, indice, réponse */
+function mc(el,it,end){let i=0,sc=0;const n=it.length,go=()=>{if(i>=n)return end(sc,n);
+const[q,o,w,h,cx,au]=it[i];let t=0;const op=sh(o.map((x,k)=>[x,k]));
+el.innerHTML=`<div class="dots">${it.map((_,k)=>`<i class="${k<=i?'on':''}"></i>`).join('')}</div>${cx?`<span class="cx">${cx}</span>`:''}<p class="qq">${q}</p><div class="row o"></div><p class="fb"></p>`;
+const fb=el.querySelector('.fb'),bs=[];
+const fin=m=>{bs.forEach(b=>{b.disabled=true;if(b.k==0)b.classList.add('good')});fb.innerHTML=m+' '+w+(au?' <button class="a2">🔊 Écouter</button>':'')+'<br><button class="p nx">Suite →</button>';if(au)fb.querySelector('.a2').onclick=()=>spk(au,.8);fb.querySelector('.nx').onclick=()=>{i++;go()}};
+op.forEach(([x,k])=>{const b=document.createElement('button');b.textContent=x;b.k=k;b.onclick=()=>{if(k==0){const p=t?1:2;sc+=p;add(p);fin(`<span class="ok">${pr()} +${p}</span>`)}else{if(!t)miss.push([q.replace(/<[^>]+>/g,''),o[0],w]);t++;b.disabled=true;if(t==1)fb.innerHTML=`<span class="ko">Non.</span> Indice : ${h}. Un dernier essai.`;else fin(`<span class="ko">La bonne réponse :</span> ${o[0]}.`)}};bs.push(b);el.querySelector('.o').append(b)})};go()}
+
+/* Écrans */
+const V=$('#v');
+const steps=()=>`<div class="steps">${ROOMS.map((r,k)=>`<button class="${ok[k]?'ok':k==cur?'on':''}" onclick="room(${k})" title="${r.n}" aria-label="Aller à : ${r.n}">${k+1}</button>`).join('')}</div>`;
+function intro(){V.innerHTML=`<h1>L’Affaire Delorme</h1><div class="card story">Madame Delorme, collectionneuse d’art, a retrouvé son salon vide. Le tableau a disparu pendant la nuit. Tu es l’enquêteur. Pour avancer, tu consultes les archives (questions inversées, verbes + à / de / par / rien), tu lis entre les lignes, tu interroges, tu décodes les sons, tu parles pour de vrai et tu rédiges l’accusation.</div><p class="mut">7 pièces, chacune avec une énigme différente. Tu gagnes des <b>preuves</b> en réussissant. Tu as 2 essais par question. Chaque pièce a une <b>fiche de rappel</b> (−1 preuve) si tu veux un coup de pouce. Ici, on ne revoit pas les bases : tu connais le français, on travaille la précision. <b>Rien n’est verrouillé</b> : tu peux passer une épreuve, sortir, ou aller directement où tu veux.</p><button class="p" id="st">Entrer dans le manoir</button><h2>Ou va où tu veux</h2><div class="row o">${ROOMS.map((r,k)=>`<button onclick="room(${k})">${k+1}. ${r.n}</button>`).join('')}<button onclick="dossier()">Voir le dossier final</button></div>`;$('#st').onclick=()=>room(0)}
+function room(k){cur=k;const r=ROOMS[k],L=ROOMS.length;V.innerHTML=`${steps()}<h2>${k+1}. ${r.n}</h2><div class="card story">${r.st}</div><div id="pz"></div><div class="row" id="ft">${r.f>=0?'<button id="fb">💡 Fiche de rappel (−1)</button>':''}<button id="sk">⏭ Passer cette épreuve</button><button id="hm">☰ Menu</button></div><div id="fc"></div>`;
+let used=0;if(r.f>=0)$('#fb').onclick=()=>{if(!used){used=1;add(-1)}$('#fc').innerHTML=`<div class="card fiche">${F[r.f]}</div>`;$('#fb').disabled=true};
+$('#sk').onclick=()=>{ok[k]=1;k<L-1?room(k+1):dossier()};$('#hm').onclick=intro;
+[ra,rb,r1,r2,r3,r4,r5][k]($('#pz'),()=>{ok[k]=1;$('#ft').innerHTML=`<button class="p" id="nx">${k<L-1?'Pièce suivante →':'Ouvrir le dossier final →'}</button><button onclick="intro()">☰ Menu</button>`;$('#nx').onclick=()=>k<L-1?room(k+1):dossier()})}
+const VB={avoir:["as","a","avons","avez","ont","faim",["","Pourquoi","Quand"],{}],parler:["parles","parle","parlons","parlez","parlent","français",["","Où","Quand","Pourquoi"],{}],aller:["vas","va","allons","allez","vont","au cinéma",["","Où","Quand","Pourquoi","Comment"],{"Où":""}],finir:["finis","finit","finissons","finissez","finissent","son travail",["","Quand","Pourquoi","Comment"],{}],pouvoir:["peux","peut","pouvons","pouvez","peuvent","venir",["","Quand","Pourquoi","Comment"],{}],habiter:["habites","habite","habitons","habitez","habitent","ici",["","Où","Pourquoi"],{"Où":""}]};
+const PN=[["tu",0],["il",1],["elle",1],["on",1],["nous",2],["vous",3],["ils",4],["elles",4]];
+const AD=[["Mets en inversion : « Elle s’est trompée de porte. »",["S’est-elle trompée de porte ?","Est-elle se trompée de porte ?","S’est trompée-t-elle de porte ?"],"Le pronom réfléchi reste devant ; l’auxiliaire s’inverse : s’est-elle.","réfléchi devant",null,null],
+["« Vous ne connaissez personne ici ? » en inversion :",["Ne connaissez-vous personne ici ?","Connaissez-vous ne personne ici ?","Ne vous connaissez-vous personne ici ?"],"« ne … personne » entoure le groupe verbe-pronom.","ne … personne autour",null,null],
+["« Le témoin a menti ? » avec le nom sujet :",["Le témoin a-t-il menti ?","A le témoin menti ?","Le témoin a menti-t-il ?"],"Nom + auxiliaire-pronom, avec -t- (a + il).","nom + pronom",null,null],
+["« Tu viens d’où ? » en inversion :",["D’où viens-tu ?","Où viens-tu d’ ?","D’où tu viens-tu ?"],"« D’où » en tête, puis verbe-pronom.","« d’où » devant",null,null]];
+function ra(el,fin){el.innerHTML=`<div class="card"><b>Trois façons, une seule question</b>${tb(['Oral','Courant','Inversion'],[['Tu as faim ?','Est-ce que tu as faim ?','<b>As-tu faim ?</b>'],['Il part quand ?','Quand est-ce qu’il part ?','<b>Quand part-il ?</b>']])}<p>L’inversion se trouve à l’écrit, dans les situations formelles et dans les interrogatoires. À toi de la construire sans hésiter.</p></div>
+<div class="card"><b>Le générateur : choisis, la page construit</b><div class="gen row"><select id="gm" aria-label="Mot de question"><option value="">(sans mot)</option><option>Où</option><option>Quand</option><option>Comment</option><option>Pourquoi</option></select><select id="gv" aria-label="Verbe">${Object.keys(VB).map(v=>`<option>${v}</option>`).join('')}</select><select id="gp" aria-label="Pronom">${PN.map(p=>`<option>${p[0]}</option>`).join('')}</select></div><div id="gout"></div><p class="mut">Seules les combinaisons correctes sont proposées. Teste « il » puis « tu », et regarde le -t-.</p></div>
+<div class="card"><b>À retenir</b><ul><li><b>Formule</b> : mot de question + verbe + trait d’union + pronom.</li><li><b>-t-</b> : voyelle + voyelle → a<b>-t-</b>il, habite<b>-t-</b>elle.</li><li><b>Sujet = nom</b> : on le garde et on ajoute un pronom : Le témoin a-t-il menti ?</li><li><b>Réfléchi</b> : devant le verbe : S’est-elle trompée ?</li><li><b>Négation</b> : N’avez-vous rien vu ?</li><li><b>Indirect</b> : pas d’inversion : Je me demande pourquoi il est parti.</li><li>🇪🇸 Le pronom sujet est <b>obligatoire</b> : ¿Has comido? → As-tu mangé ?</li></ul></div><p class="mut">Défi d’archives :</p><div id="ad"></div>`;
+const cap=x=>x.charAt(0).toUpperCase()+x.slice(1);
+const upd=()=>{const v=VB[$('#gv').value],pi=$('#gp').selectedIndex,[p,i]=PN[pi],m=$('#gm').value,f=v[i],t=(i==1&&/[ae]$/.test(f))?'-t':'',c=(m in v[7])?v[7][m]:v[5],eq=/^(il|elle|on|ils|elles)$/.test(p)?'est-ce qu’':'est-ce que ';
+const J=a=>a.filter(Boolean).join(' '),inv=cap(J([m,f+t+'-'+p,c])+' ?'),cou=cap(J([m,eq+p,f,c])+' ?'),ora=cap((['Pourquoi','Quand'].includes(m)?J([m,p,f,c]):J([p,f,c,m.toLowerCase()]))+' ?');
+$('#gout').innerHTML=`<p><b>Inversion :</b> <span class="sent">${inv}</span> <button id="gs">🔊</button></p><p class="mut">Courant : ${cou}<br>Oral : ${ora}</p>${t?'<p class="ok">-t- ajouté : le verbe finit par une voyelle et le pronom commence par une voyelle.</p>':''}`;$('#gs').onclick=()=>spk(inv,.85)};
+const fm=()=>{const a=VB[$('#gv').value][6],g=$('#gm'),cu=g.value;g.innerHTML=a.map(x=>`<option value="${x}">${x||'(sans mot)'}</option>`).join('');if(a.includes(cu))g.value=cu};$('#gv').onchange=()=>{fm();upd()};$('#gm').onchange=upd;$('#gp').onchange=upd;fm();upd();mc($('#ad'),AD,fin)}
+const DT=[["à","on avance vers l’action : début, effort, apprentissage, persévérance","commencer à, se mettre à, continuer à, apprendre à, réussir à, arriver à, hésiter à, s’habituer à, s’attendre à, tenir à, renoncer à, aider / inviter quelqu’un à","Il s’est mis à pleuvoir."],["de","on s’éloigne ou on décide : arrêt, fin, refus, oubli, sentiment","arrêter de, finir de, cesser de, décider de, essayer de, refuser de, oublier de, risquer de, éviter de, venir de, avoir envie / besoin / peur de, empêcher quelqu’un de, demander / dire à quelqu’un de","Elle évite de répondre."],["par","l’ordre des étapes ou le résultat final","commencer par, finir par, terminer par","J’ai fini par comprendre."],["rien","le verbe et l’infinitif forment une équipe : volonté, capacité, obligation, goût, mouvement","vouloir, pouvoir, devoir, savoir, aimer, préférer, adorer, détester, aller, espérer, compter, oser, sembler, falloir","Nous espérons gagner."]];
+const vv=(q,a,w)=>[q,[a,...["à","de","par","rien"].filter(x=>x!=a)],w,"avance (à), s’éloigne (de), ordre (par) ou équipe (rien) ?",null,null];
+const VV=[vv("Il a fini ___ comprendre, en fin de compte.","par","finir PAR = résultat final."),vv("Je m’habitue ___ me lever tôt.","à","s’habituer À."),vv("Elle risque ___ perdre son poste.","de","risquer DE."),vv("Nous espérons ___ gagner.","rien","espérer + infinitif direct."),vv("On l’a empêché ___ partir.","de","empêcher quelqu’un DE."),vv("Il m’a aidé ___ déménager.","à","aider quelqu’un À."),vv("Il renonce ___ voyager cet été.","à","renoncer À."),vv("Tu t’attends ___ réussir du premier coup ?","à","s’attendre À."),vv("Elle s’est mise ___ pleurer.","à","se mettre À."),vv("Il évite ___ répondre.","de","éviter DE."),vv("Je compte ___ partir demain.","rien","compter + infinitif direct (= avoir l’intention)."),vv("Il a tenu ___ nous accompagner.","à","tenir À (= y tenir)."),vv("Commence ___ t’échauffer, puis soulève.","par","commencer PAR : première étape.")];
+function rb(el,fin){el.innerHTML=`<div class="card"><b>Pourquoi ce petit mot ?</b><p>Après un verbe, le petit mot dit la <b>relation</b> entre le verbe et l’action. Ouvre chaque dossier.</p>${DT.map(([a,b,c,d])=>`<details><summary>${a} : ${b}</summary><p>${c}</p><p><i>${d}</i></p></details>`).join('')}<p class="es" style="color:var(--ac)">🇪🇸 En espagnol, beaucoup de verbes se collent à l’infinitif. En français, seuls les verbes de volonté, capacité, obligation et goût le font.</p></div><p class="mut">Examen :</p><div id="vq"></div>`;mc($('#vq'),VV,fin)}
+function r1(el,fin){let df=0;const N=D.filter(x=>typeof x!='string').length;el.innerHTML=`<div class="card"><p class="mut">Touche chaque groupe de mots fautif. <b id="dc">0/${N}</b></p><p class="txt" id="det" style="line-height:2.1"></p><button id="dh">Je bloque : montre une faute (−1)</button></div>`;const dt=$('#det'),er=[];
+const fnd=s=>{if(s.dataset.d)return;s.dataset.d=1;df++;s.className='found';s.innerHTML=`${s.dataset.f}<small>${s.dataset.w}</small>`;$('#dc').textContent=df+'/'+N;if(df==N)fin()};
+D.forEach(p=>{if(typeof p=='string'){p.split(/(\s+)/).forEach(w=>{if(!w.trim()){dt.append(w);return}const s=document.createElement('span');s.className='w';s.textContent=w;s.onclick=()=>{s.className='miss';setTimeout(()=>s.className='w',600)};dt.append(s)})}else{const s=document.createElement('span');s.className='w';s.textContent=p[0];s.dataset.f=p[1];s.dataset.w=p[2];s.onclick=()=>{if(!s.dataset.d)add(2);fnd(s)};er.push(s);dt.append(s)}});
+$('#dh').onclick=()=>{const s=er.find(x=>!x.dataset.d);if(s){add(-1);miss.push([s.textContent,s.dataset.f,s.dataset.w]);fnd(s)}}}
+function r2(el,fin){mc(el,IT,fin)}
+function r3(el,fin){mc(el,SO,fin)}
+const OP=[
+{t:"Traduis à voix haute",p:"🇪🇸 ¿Podría decirme a qué hora llegó el guardia y por qué no llamó a la policía?",m:"Pourriez-vous me dire à quelle heure le gardien est arrivé et pourquoi il n’a pas appelé la police ?",c:["« pourriez-vous » (politesse)","« à quelle heure » + question indirecte, sans inversion","passé composé : est arrivé / n’a pas appelé"]},
+{t:"Traduis à voix haute",p:"🇪🇸 ¿Desde cuándo vive aquí y de qué tiene miedo?",m:"Depuis quand habitez-vous ici et de quoi avez-vous peur ?",c:["« depuis quand »","inversion avec « vous »","« avoir peur de quoi »"]},
+{t:"Traduis à voix haute",p:"🇪🇸 Me pregunto por qué no habló con nadie.",m:"Je me demande pourquoi il n’a parlé à personne.",c:["« je me demande pourquoi » sans inversion","« ne … personne » : sans « pas »","passé composé : n’a parlé"]},
+{t:"Improvise (25 secondes)",p:"Tu es le commissaire. Sans rien lire, pose trois questions au jardinier : une avec inversion, une avec -t-, une indirecte.",m:"Où étiez-vous cette nuit-là ? A-t-il menti selon vous ? Dites-moi pourquoi vous avez quitté le manoir.",c:["1 question avec inversion","1 question avec -t-","1 question indirecte (sans inversion)"]},
+{t:"Improvise (25 secondes)",p:"Raconte ta journée d’hier avec : j’ai fini par, j’ai décidé de, je me suis mis à, avant de + infinitif.",m:"Hier, j’ai décidé de me lever tôt. Je me suis mis à travailler avant de déjeuner. J’ai fini par tout terminer vers dix-huit heures.",c:["fini par","décidé de","mis à","avant de + infinitif"]},
+{t:"Écoute, puis répète de mémoire",k:'ec',m:"Madame Delorme, qui n’avait rien entendu, a affirmé que son jardinier s’en était allé plus tôt que d’habitude."},
+{t:"Écoute, puis répète de mémoire",k:'ec',m:"Pourriez-vous m’expliquer pourquoi ces sceptiques sont si réticents ?"},
+{t:"Écoute, puis répète de mémoire",k:'ec',m:"Les chaussettes de l’archiduchesse sont-elles sèches, archi-sèches ?"},
+{t:"Écoute, puis répète de mémoire",k:'ec',m:"Un chasseur sachant chasser doit savoir chasser sans son chien."}];
+function r4(el,fin){let n=0;OP.forEach(o=>{const d=document.createElement('div');d.className='card';let mr,ch=[],got=0;const ec=o.k=='ec';
+d.innerHTML=`<span class="cx">${o.t}</span><p class="qq">${ec?'Sans lire : écoute, puis répète de mémoire.':o.p}</p>${ec?'<div class="row"><button class="p ln">🔊 Écouter</button><button class="sl">🐢 Lent</button></div>':''}<div class="row"><button class="rc p">⏺ Enregistre-toi</button><button class="vc">Je l’ai dit à voix haute</button></div><audio class="pl" controls hidden></audio><div class="rv"></div>`;
+const rv=d.querySelector('.rv'),rc=d.querySelector('.rc'),pl=d.querySelector('.pl');
+const rev=()=>{if(rv.innerHTML)return;rv.innerHTML=`<p class="mut">Modèle :</p><p class="sent">${o.m}</p><button class="md">🔊 Modèle</button>${o.c?`<p class="mut">Tu as bien dit… ?</p>${o.c.map(x=>`<label class="ck"><input type="checkbox">${x}</label>`).join('')}`:''}<p>Note-toi honnêtement :</p><div class="row"><button data-n="3">Solide (+3)</button><button data-n="2">Correct (+2)</button><button data-n="1">À retravailler (+1)</button></div>`;
+rv.querySelector('.md').onclick=()=>spk(o.m,.85);rv.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{if(!got){got=1;add(+b.dataset.n);rv.querySelectorAll('[data-n]').forEach(x=>x.disabled=true);if(++n==OP.length)fin()}})};
+if(ec){d.querySelector('.ln').onclick=()=>spk(o.m,.9);d.querySelector('.sl').onclick=()=>spk(o.m,.55)}
+d.querySelector('.vc').onclick=rev;
+rc.onclick=async()=>{if(mr&&mr.state=='recording'){mr.stop();return}try{const st=await navigator.mediaDevices.getUserMedia({audio:true});ch=[];mr=new MediaRecorder(st);mr.ondataavailable=e=>ch.push(e.data);mr.onstop=()=>{st.getTracks().forEach(x=>x.stop());pl.src=URL.createObjectURL(new Blob(ch,{type:mr.mimeType}));pl.hidden=false;rc.textContent='⏺ Refaire';rev()};mr.start();rc.textContent='⏹ Stop'}catch(e){rv.insertAdjacentHTML('beforebegin','<p class="mut">Micro indisponible ici : dis-le à voix haute et appuie sur « Je l’ai dit ».</p>')}};
+el.append(d)})}
+function r5(el,fin){el.innerHTML=`<div class="card"><p class="mut">Complète l’accusation. ∅ s’écrit « — ». 2 essais, puis le corrigé.</p><div class="txt" id="cz"></div><div class="row"><button class="p" id="cv">Vérifier</button></div><p id="cr" class="fb"></p></div>`;
+$('#cz').innerHTML=TX.replace(/\[(\w)\]/g,(m,l)=>`<select data-p="${l}"><option value="">?</option>${CL[l][1].map(o=>`<option>${o}</option>`).join('')}</select>`);const gv=new Set();let att=0;
+$('#cv').onclick=()=>{att++;let c=0;document.querySelectorAll('#cz select').forEach(s=>{const l=s.dataset.p,g=s.value==CL[l][0];if(g){c++;s.className='g';if(!gv.has(l)){gv.add(l);add(2)}}else{s.className='r';if(att>=2){s.value=CL[l][0];s.className='g';miss.push(['Verdict : trou « '+l+' »',CL[l][0],'à revoir dans la fiche de la pièce 5'])}}});
+$('#cr').innerHTML=att<2?`<span class="ko">${c}/${Object.keys(CL).length}.</span> Les cases rouges sont fausses. Un dernier essai.`:`${c}/${Object.keys(CL).length} sans aide. Corrigé affiché.`;if(att>=2||c==8){$('#cv').disabled=true;fin()}}}
+function dossier(){const rk=pts>=95?'Commissaire':pts>=55?'Inspecteur':'Stagiaire';
+V.innerHTML=`${steps()}<h1>Dossier clos</h1><div class="card story">Le jardinier est arrêté. Grade obtenu : <b>${rk}</b> avec <b>${pts}</b> preuves.</div><h2>À revoir</h2>${miss.length?`<div class="card">${miss.map(([q,a,w])=>`<p><b>${q}</b><br>→ ${a}<br><span class="mut">${w}</span></p>`).join('')}</div>`:'<div class="card">Aucune faute : dossier impeccable.</div>'}<button class="p" onclick="location.reload()">Rejouer l’enquête</button>`}
+intro();
+</script></body></html>
